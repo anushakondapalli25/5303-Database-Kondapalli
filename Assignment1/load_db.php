@@ -18,11 +18,11 @@ $json = file_get_contents("http://api.randomuser.me/?results=1000");
 $json_array = json_decode($json);
 
 for($i=0;$i<sizeof($json_array->results);$i++){
-  $gender = $json_array->results[$i]->user->gender;
+    	$gender = $json_array->results[$i]->user->gender;
 	$title = $json_array->results[$i]->user->name->title;
 	$first = $json_array->results[$i]->user->name->first;
 	$last = $json_array->results[$i]->user->name->last;
-  $street = $json_array->results[$i]->user->location->street;
+    	$street = $json_array->results[$i]->user->location->street;
 	$city = $json_array->results[$i]->user->location->city;
 	$state = $json_array->results[$i]->user->location->state;
 	$zip = $json_array->results[$i]->user->location->zip;
